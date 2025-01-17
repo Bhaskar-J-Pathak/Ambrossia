@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Manrope:wght@200..800&display=swap');
+
+@font-face {
+    font-family: 'Canicule Display';
+    src: url('../behance-670e21d428946/CaniculeDisplayv0.3Trials/ttfs/CaniculeDisplayv0.3-Regular.Trial.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Night Watch";
+    src: url(../TheNightWatch.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+}
+
+.header{
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(../images/background.png) no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    margin: auto 5vw;
+    padding: .8vw .65vw;
+    position: relative;
+}
+
+.navlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.navitem{
+    font-size: 1.2vw;
+    font-weight: 300;
+    font-family: 'Manrope';
+    list-style: none;
+}
+
+.navlogo{
+    font-size: 2.5vw;
+    font-family: 'Night Watch';
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 12vw;
+    z-index: 3;
+    width: 100%;
+}
+
+.main-text{
+    font-size: 2vw;
+    font-weight: 100;
+    font-family: "Night Watch";
+    line-height: 1.5vw;
+    text-align: left;
+    width: 60%;
+}
+
+.hero-text h1{
+    font-size: 8vw;
+    font-family: 'Night Watch';
+    letter-spacing: 0.6px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.hero-text h2{
+    font-size: 2vw;
+    font-family: "Night Watch";
+    text-align: right;
+    line-height: 1.5vw;
+    width: 60%;
+}
+
+.scroll-container{
+    position: relative;
+    padding: 4vw 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+    color: white;
+}
+
+.scroll{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.item{
+    white-space: nowrap;
+    display: inline-block;
+    animation: scroll 12s linear infinite;
+}
+
+.item h1{
+    font-family: "Bonheur Royale";
+    font-size: 2.5vw;
+    font-weight: 100;
+    display: inline-block;
+    margin: 0 1vw;
+}
+
+@keyframes scroll{
+    from{
+        transform: translate(0%);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+.video-container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+    position: relative;
+}
+
+.video-container video{
+    width: 95%;
+    margin-top: 1vw;
+    margin-left: 2.5vw;
+    z-index: 1;
+    position: relative;
+    border-radius: 27px;
+}
+
+.hero-shape{
+    width: 55vw;
+    height: 37vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.c1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: blur(20px);
+    background-color: whitesmoke;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.c2{
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    filter: blur(22px);
+    background-color: whitesmoke;
+    border-radius: 50%;
+    animation: one 3s linear alternate infinite;
+}
+
+.c3{
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: two 5s linear alternate infinite;
+}
+
+@keyframes one{
+    from{
+        transform: translate(-5%, 20%);
+    }
+    to{
+        transform: translate(33%, -10%);
+    }
+}
+
+@keyframes two{
+    from{
+        transform: translate(-10%, 40%);
+    }
+    to{
+        transform: translate(-10%, -15%);
+    }
+}
+
+.about{
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+}
+
+.left{
+    margin: 6vw;
+    color: white;
+    text-align: left;
+    width: 50%;
+}
+
+.left h1{
+    font-family: 'Night Watch';
+    font-weight: 500;
+    font-size: 5.6vw;
+    margin-bottom: 2vw;
+}
+
+.left h2{
+    font-family: 'Bonheur Royale';
+    font-weight: 300;
+    font-size: 3.8vw;
+    margin-bottom: 0.5vw;
+}
+
+.left p{
+    margin-bottom: 3vw;
+    font-family: 'Manrope';
+    font-weight: 100;
+}
+
+.right{
+    width: 50%;
+}
+
+.right img{
+    margin-top: 2vw;
+    width: 100%;
+    height: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+}
+.display{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+}
+
+.revealer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.revealer::-webkit-scrollbar{
+    display: none;
+}
+
+.revealer{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.top, .bottom{
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.top{
+    top: 0%;
+}
+
+.bottom{
+    bottom: 0%;
+}
+
+.toph, .bottomh{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "Manrope";
+    font-size: 18.8vw;
+    transform: translate(-50%, -50%);
+}
+
+.toph{
+    bottom: 50%;
+}
+
+.bottomh{
+    top: 0%;
+}
+
+.center{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+    z-index: 4;
+}
+
+.image-slider{
+    padding-top: 10.42vw;
+    margin-left: 10.42vw;
+    color: #fff;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(4, 4, 4) 80%, rgb(0, 0, 0) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.block{
+    position: relative;
+    height: 24vw;
+    width: 30.2vw;
+    margin: 0.52vw 15.5vw 1.04vw 4.17vw;
+    z-index: 0;
+}
+
+.block h1{
+    position: absolute;
+    font-family: 'Night Watch';
+    font-size: 2vw;
+    font-weight: 100;
+}
+
+.one{
+    background: url(../images/d1.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.two{
+    background: url(../images/d2.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.three{
+    background: url(../images/d3.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.four{
+    background: url(../images/d4.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.five{
+    background: url(../images/d5.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.six{
+    background: url(../images/d6.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.seven{
+    background: url(../images/moss.webp) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.eight{
+    background: url(../images/Forbidden.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.nine{
+    background: url(../images/Beetroot.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.one h1, .three h1, .five h1, .seven h1, .nine h1{
+    bottom: 0;
+    right: -3.125vw;
+}
+
+.two h1, .four h1, .six h1, .eight h1{
+    right: -3.125vw;
+}

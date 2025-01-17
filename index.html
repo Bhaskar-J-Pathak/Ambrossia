@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambrossia Dessert Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="navlist">
+            <li class="navitem"><a href="#">Home</a></li>
+            <li class="navitem navlogo"><a href="#">Ambrossia</a></li>
+            <li class="navitem"><a href="#">Products</a></li>
+          </ul>
+        </nav>
+        <div class="hero-text">
+          <h3 class="main-text">The Only Award Winning</h3>
+          <h1>Dessert Bar</h1>
+          <h2>In the World</h2>
+        </div>
+      </div>
+      <div class="scroll-container">
+        <div class="scroll">
+          <div class="item">
+            <h1>Ambrossia</h1>
+            <h1>Dessert</h1>
+            <h1>Bar</h1>
+          </div>
+          <div class="item">
+            <h1>Ambrossia</h1>
+            <h1>Dessert</h1>
+            <h1>Bar</h1>
+          </div>
+          <div class="item">
+            <h1>Ambrossia</h1>
+            <h1>Dessert</h1>
+            <h1>Bar</h1>
+          </div>
+          <div class="item">
+            <h1>Ambrossia</h1>
+            <h1>Dessert</h1>
+            <h1>Bar</h1>
+          </div>
+          <div class="item">
+            <h1>Ambrossia</h1>
+            <h1>Dessert</h1>
+            <h1>Bar</h1>
+          </div>
+        </div>
+      </div>
+      <div class="video-container">
+        <video src="./images/intro.mp4" muted autoplay loop></video>
+        <div class="hero-shape">
+          <div class="c1"></div>
+          <div class="c2"></div>
+          <div class="c3"></div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="left">
+          <h1>About</h1>
+          <h2>Established 2016</h2>
+          <p>
+            Ambrossia Dessert Bar was founded in 2014 by Arthur Gray who
+            embarked on his journey into the culinary world at the age of just
+            14. With the unwavering support of his family, Arthur transformed
+            his passion for desserts into a global phenomenon.
+          </p>
+
+          <h2>A World of Firsts</h2>
+          <p>
+            Ambrossia stands proudly as the only awarded dessert bar in the
+            world. From its humble beginnings, it has continuously pushed the
+            boundaries of creativity, innovation, and excellence, crafting
+            desserts that delight the senses and redefine indulgence.
+          </p>
+
+          <h2>The Ambrossia Experience</h2>
+          <p>
+            At Ambrossia, every dessert tells a story. With an emphasis on
+            impeccable craftsmanship and the finest ingredients, the bar
+            delivers a multi-sensory experience that keeps dessert lovers coming
+            back for more. Whether it's a signature creation or a seasonal
+            special, every bite is a masterpiece.
+          </p>
+
+          <h2>Global Recognition</h2>
+          <p>
+            Over the years, Ambrossia has earned its place on the world stage,
+            receiving accolades for its groundbreaking approach to dessert
+            making. It's more than a bar—it's an institution of dessert artistry
+            that inspires and captivates all who visit.
+          </p>
+        </div>
+        <div class="right">
+          <img src="./images/about.jpg" alt="The Ambrossia Dessert Bar" />
+        </div>
+      </div>
+      <div class="display">
+        <div class="revealer">
+          <div class="top">
+            <h1 class="toph">Creations</h1>
+          </div>
+          <div class="center" id="sliderContainer">
+            <div class="image-slider">
+              <div class="block one"><h1>Dark Side</h1></div>
+              <div class="block two"><h1>Tropical Passion</h1></div>
+              <div class="block three"><h1>Cherry Blossom</h1></div>
+              <div class="block four"><h1>Red</h1></div>
+              <div class="block five"><h1>Summer Blast</h1></div>
+              <div class="block six"><h1>Sweet Chaos</h1></div>
+              <div class="block seven"><h1>Moss</h1></div>
+              <div class="block eight"><h1>Forbidden Fruit</h1></div>
+              <div class="block nine"><h1>Purple Noise</h1></div>
+            </div>
+          </div>
+          <div class="bottom">
+            <h1 class="bottomh">Creations</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+    <script src="./js/imageSlider.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+      let hs;
+      const initializeSlider = () => {
+        var blocks = document.getElementsByClassName("block");
+        var container = document.getElementsByClassName("image-slider");
+        hs = new HorizontalScroll.default({
+            blocks: blocks,
+            container: container,
+            isAnimated: true,
+            springEffect: 0.8,
+        });
+      };
+
+      // Wait for center div animation to complete before initializing slider
+      const centerDiv = document.querySelector('.center');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.8) {
+            initializeSlider();
+          } else {
+            // Reset slider when scrolling up
+            if (hs) {
+              hs.scrollTo(0, true); // Scroll back to first block
+            }
+          }
+        });
+      }, {
+        threshold: 0.8 // Trigger when 80% of the center div is visible
+      });
+
+      observer.observe(centerDiv);
+    </script>
+  </body>
+</html>
